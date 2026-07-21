@@ -1,0 +1,9 @@
+{
+  "coverage_threshold": 0.95,
+  "rows": null,
+  "cols": null,
+  "languages": ["zh-Hans", "en-US"],
+  "ocr_engines": ["vision", "rapidocr", "tesseract"],
+  "perspective_correction": true,
+  "inventory_verified": false
+}
