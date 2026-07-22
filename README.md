@@ -1,8 +1,12 @@
 # Puzzle Solving Skills
 
-Private Codex skill collection for high-accuracy puzzle collaboration. The repository contains a general collaboration workflow and its visual-transcription dependency.
+Private Codex skill collection for high-accuracy puzzle collaboration. The repository contains one authoritative collaboration workflow, its visual-transcription dependency, and a legacy compatibility alias.
 
 ## Included skills
+
+### `puzzle-solving`
+
+Legacy compatibility alias. It activates only when the old skill name is explicitly invoked and immediately delegates to `run-puzzle-collaboration`; it contains no independent solving workflow.
 
 ### `run-puzzle-collaboration`
 
@@ -12,13 +16,14 @@ Maintains an Excel-first source of truth, separates observations from hypotheses
 
 Implements the discipline **transcribe first, solve second** with multi-engine OCR, grid segmentation, coordinate IDs, color analysis, geometry detection, perspective correction, before/after image differencing, uncertainty tables, and an Excel coverage gate.
 
-`run-puzzle-collaboration` invokes `visual-puzzle-transcriber` for image-heavy puzzles, so install both skills together.
+`run-puzzle-collaboration` invokes `visual-puzzle-transcriber` for image-heavy puzzles. Install all three folders to preserve old prompts without retaining two competing workflows.
 
 ## Install locally
 
-Copy the two skill directories into the Codex skills directory:
+Copy the three skill directories into the Codex skills directory:
 
 ```bash
+rsync -a skills/puzzle-solving/ ~/.codex/skills/puzzle-solving/
 rsync -a skills/run-puzzle-collaboration/ ~/.codex/skills/run-puzzle-collaboration/
 rsync -a skills/visual-puzzle-transcriber/ ~/.codex/skills/visual-puzzle-transcriber/
 ```
@@ -57,4 +62,3 @@ Use $visual-puzzle-transcriber to transcribe this image before solving it.
 ## Privacy and licensing
 
 This is a private repository. It intentionally excludes contest source material, answer histories, browser data, credentials, caches, and local dependency directories. No public-use license is granted at this stage.
-

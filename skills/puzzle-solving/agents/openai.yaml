@@ -1,0 +1,5 @@
+interface:
+  display_name: "Puzzle Solving（兼容入口）"
+  short_description: "旧名称兼容入口，统一转交新版高正确率解题协作流程"
+  default_prompt: "Use $puzzle-solving as a compatibility alias and immediately delegate to $run-puzzle-collaboration."
+
