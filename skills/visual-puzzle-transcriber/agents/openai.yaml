@@ -1,4 +1,4 @@
 interface:
   display_name: "Visual Puzzle Transcriber"
-  short_description: "多引擎识别、逐格转录和覆盖率锁定门的视觉谜题分析流程"
-  default_prompt: "Use $visual-puzzle-transcriber to transcribe this puzzle image before attempting any solve."
+  short_description: "按需选择直接观察、局部识别或完整审计转录，避免无效OCR阻塞解题"
+  default_prompt: "Use $visual-puzzle-transcriber to inspect this puzzle image at the lightest sufficient level, escalating to full audited transcription only if exact visual coverage is necessary."

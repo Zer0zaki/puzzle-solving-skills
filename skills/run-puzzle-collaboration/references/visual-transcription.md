@@ -1,6 +1,6 @@
 # Visual transcription protocol
 
-Use this protocol before interpreting a dense image puzzle.
+Use this protocol only for a full audited transcription or when a final claim depends on exhaustive visual coverage. For readable images or localized uncertainty, inspect directly or transcribe only the relevant regions and continue reasoning with explicit confidence labels.
 
 ## Inventory
 
@@ -19,8 +19,10 @@ Do not use `中` or `低` readings as hard constraints without branching the sol
 
 ## Coverage gate
 
-Before mechanism search, confirm every panel and legend is inventoried, every repeated symbol has a count, ordering is preserved, color and direction categories are explicit, missing material is listed, and interaction changes are separate states.
+Before locking a claim that depends on the complete image, confirm every relevant panel and legend is inventoried, every depended-on repeated symbol has a count, ordering is preserved, color and direction categories are explicit, missing material is listed, and interaction changes are separate states.
+
+Do not use the coverage gate to block early observation, localized hypothesis testing, or a candidate that is explicitly independent of uncovered regions.
 
 ## Mechanism testing
 
-Test a hypothesis against every transcribed row. Record unexplained rows and counterexamples. A neat fit to a few examples is evidence for a candidate, not a lock.
+Share a mechanism-shaping observation before completing the transcript. Test a surviving hypothesis against every row it claims to explain and record counterexamples. A neat fit to a few examples is evidence for a candidate, not a lock.

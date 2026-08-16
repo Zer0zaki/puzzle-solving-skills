@@ -1,6 +1,6 @@
 # Puzzle Solving Skills
 
-Private Codex skill collection for high-accuracy puzzle collaboration. The repository contains one authoritative collaboration workflow, its visual-transcription dependency, and a legacy compatibility alias.
+Private Codex skill collection for fast, evidence-disciplined puzzle collaboration. The repository contains one authoritative collaboration workflow, its on-demand visual-transcription dependency, and a legacy compatibility alias.
 
 ## Included skills
 
@@ -10,13 +10,13 @@ Legacy compatibility alias. It activates only when the old skill name is explici
 
 ### `run-puzzle-collaboration`
 
-Maintains an Excel-first source of truth, separates observations from hypotheses, manages feeder and Meta dependencies, preserves rejected routes, enforces answer verification, and applies the agreed network-research boundary.
+Shares testable observations and candidates immediately, distinguishes ordinary questions from real solving requests, and escalates to OCR, workbooks, feeder tracking, or formal verification only when the task requires them. It preserves the agreed network-research boundary and final-answer gate without letting process artifacts block live collaboration.
 
 ### `visual-puzzle-transcriber`
 
-Implements the discipline **transcribe first, solve second** with multi-engine OCR, grid segmentation, coordinate IDs, color analysis, geometry detection, perspective correction, before/after image differencing, uncertainty tables, and an Excel coverage gate.
+Uses a three-level visual workflow: direct observation, targeted verification, or full audited transcription. Full mode retains multi-engine OCR, grid segmentation, coordinate IDs, color and geometry analysis, perspective correction, before/after differencing, uncertainty tables, and an Excel coverage gate; readable or localized evidence no longer requires the full pipeline.
 
-`run-puzzle-collaboration` invokes `visual-puzzle-transcriber` for image-heavy puzzles. Install all three folders to preserve old prompts without retaining two competing workflows.
+`run-puzzle-collaboration` invokes `visual-puzzle-transcriber` only when unclear or exhaustive visual evidence materially affects the solve. Install all three folders to preserve old prompts without retaining two competing workflows.
 
 ## Install locally
 
@@ -41,11 +41,14 @@ Use $run-puzzle-collaboration to structure, solve, verify, and track this puzzle
 For visual transcription only:
 
 ```text
-Use $visual-puzzle-transcriber to transcribe this image before solving it.
+Use $visual-puzzle-transcriber to inspect this image at the lightest sufficient level and fully transcribe it only if necessary.
 ```
 
 ## Operating boundaries
 
+- A puzzle workspace or image does not by itself trigger a solving or OCR workflow; simple questions receive direct answers.
+- Share mechanism-shaping observations, candidates, rejections, and blockers before updating workbooks or repairing tools.
+- Use one broad OCR attempt and at most one targeted retry by default, then switch to manual inspection or a precise user question.
 - Use the internet for topic knowledge, factual verification, and relevant public databases.
 - Do not search for the puzzle source, original instance, write-up, solution, or answer.
 - Do not inspect the user's contest browser or authenticated contest interface for material the user has not supplied.
@@ -56,7 +59,7 @@ Use $visual-puzzle-transcriber to transcribe this image before solving it.
 
 - The collaboration packet validator requires Node.js.
 - The visual pipeline requires Python 3, OpenCV, and NumPy.
-- OCR support is opportunistic: macOS Vision uses Swift; RapidOCR and Tesseract require their corresponding local dependencies.
+- OCR support is optional and opportunistic: macOS Vision uses Swift; RapidOCR and Tesseract require their corresponding local dependencies.
 - Excel workbook generation uses the Codex workspace dependency `@oai/artifact-tool` when available.
 
 ## Privacy and licensing

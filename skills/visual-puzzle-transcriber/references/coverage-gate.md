@@ -1,5 +1,7 @@
 # Coverage and lock gate
 
+Apply this gate only in Level C full audited transcription or when a final claim depends on exhaustive visual coverage. It does not govern direct observation, targeted OCR, or early mechanism exploration.
+
 ## Coverage definition
 
 An expected region is covered when it comes from an independently reviewed, image-hash-matched inventory manifest, has a matching detected region row, and has one of these statuses:
@@ -16,10 +18,12 @@ The workbook may display `允许` only when all conditions pass:
 1. coverage is at least the configured threshold, default 95%;
 2. inventory verification is `是`, with reviewer, timestamp, accepted grid review, and matching image SHA-256;
 3. there are no untracked panels or regions;
-4. text-bearing material has at least two successful OCR engines, unless the operator records a justified exception;
+4. text-bearing material has sufficient independent review for the depended-on readings; two successful OCR engines are preferred for dense or ambiguous text, but clear manual review, user confirmation, or a recorded justified exception may substitute;
 5. the lock request concerns only evidence covered by the reviewed inventory.
 
 Automatic grid detection or an external region manifest never confirms the inventory by itself and may not define its own coverage denominator. A whole-image fallback is useful for evidence collection but must remain blocked until manually reviewed.
+
+Failure of one OCR engine is not a reason to repair the OCR stack when other evidence is sufficient. Use the skill's circuit breaker and preserve the failure as an uncertainty or exception.
 
 ## Two-stage review
 
@@ -33,3 +37,5 @@ Automatic grid detection or an external region manifest never confirms the inven
 - Threshold passed but inventory unconfirmed: at most `候选`.
 - Inventory confirmed but a depended-on reading is uncertain: at most `高置信`.
 - `已锁定`: coverage gate passed, depended-on readings resolved or explicitly branched, and an independent mechanism check succeeded.
+
+These statuses apply to full-coverage claims. A targeted observation may be reported immediately with its own confidence label even while the full gate remains blocked.

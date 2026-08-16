@@ -1,4 +1,4 @@
 interface:
-  display_name: "高正确率解题协作"
-  short_description: "用结构化题目包、状态工作簿和验证门提高复杂谜题正确率"
-  default_prompt: "Use $run-puzzle-collaboration to structure, solve, verify, and track this puzzle. You may research general knowledge and databases, but never hunt for the puzzle source or solution, and never control the user's contest browser."
+  display_name: "实时解题协作"
+  short_description: "优先即时分享可检验候选，再按需升级转录、工作簿记录和正式验证"
+  default_prompt: "Use $run-puzzle-collaboration to solve this puzzle by sharing core observations immediately and escalating OCR, workbooks, and formal gates only when the task truly requires them."
