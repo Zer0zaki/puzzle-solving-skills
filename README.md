@@ -64,6 +64,4 @@ Use $visual-puzzle-transcriber to inspect this image at the lightest sufficient 
 
 ## Privacy and licensing
 
-This is a public source repository. It intentionally excludes contest source material, answer histories, browser data, credentials, caches, and local dependency directories.
-
-No open-source license has been selected yet. Until a `LICENSE` file is added, all rights remain reserved even though the source is publicly visible.
+This is a public repository released under the [MIT License](LICENSE). It intentionally excludes contest source material, answer histories, browser data, credentials, caches, and local dependency directories.
