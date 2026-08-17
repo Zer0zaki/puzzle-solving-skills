@@ -64,4 +64,6 @@ Use $visual-puzzle-transcriber to inspect this image at the lightest sufficient 
 
 ## Privacy and licensing
 
-This is a private repository. It intentionally excludes contest source material, answer histories, browser data, credentials, caches, and local dependency directories. No public-use license is granted at this stage.
+This is a public source repository. It intentionally excludes contest source material, answer histories, browser data, credentials, caches, and local dependency directories.
+
+No open-source license has been selected yet. Until a `LICENSE` file is added, all rights remain reserved even though the source is publicly visible.
