@@ -1,6 +1,10 @@
 # Puzzle Solving Skills
 
-Private Codex skill collection for fast, evidence-disciplined puzzle collaboration. The repository contains one authoritative collaboration workflow, its on-demand visual-transcription dependency, and a legacy compatibility alias.
+Open-source Codex skill collection for fast, evidence-disciplined puzzle collaboration. The repository contains one authoritative collaboration workflow, its on-demand visual-transcription dependency, and a legacy compatibility alias.
+
+## Validation and version
+
+This skill workflow has been tested in two puzzle-hunt competitions: **PnKU3** and **CCBC17**. After each competition, its real-world performance was reviewed and the workflow was further optimized. The current release is **version 1.2**.
 
 ## Included skills
 
